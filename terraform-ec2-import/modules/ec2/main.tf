@@ -8,10 +8,10 @@ terraform {
 }
 
 
-resource "aws_instance" "oat-node" {
+resource "aws_instance" "prod-node" {
     ami                         = "${var.ami}"
     availability_zone           = "${var.availability_zone}"
-    ebs_optimized               = true
+    ebs_optimized               = false
     instance_type               = "${var.instance_type}"
     monitoring                  = false
     key_name                    = "${var.key_name}"
